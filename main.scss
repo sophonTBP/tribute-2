@@ -118,6 +118,14 @@ header {
   width: 80%;
 }
 
+.fade-in{
+  opacity: 0;
+  transition: opacity 250ms ease-in;
+}
+
+.fade-in.appear{
+  opacity: 1;
+}
 
 
 
@@ -141,11 +149,14 @@ header {
     padding-top: -5rem;
 
     .books-title{
-      margin-top: 8rem;
-      padding-top: -4rem;
+      margin-top: 6rem;
+      padding-top: -6rem;
     }
    img{width:60%; 
      margin:0 auto;
+     min-width: 50px;
+     min-height: 50px;
+     border: 1px solid red;
 }
     p{
       width: 80%;
@@ -165,8 +176,12 @@ header {
    #hs-text{
      order:8;
 
-}
 }}
+} /*
+
+*/
+
+
 
    .article-section{
      display: block;
@@ -179,9 +194,7 @@ header {
  margin: 8rem auto;
 text-align: center;
 .media-container{display: block;
-.video-title{
-  
-}
+
  
 .video-container{
    position: relative;
@@ -256,11 +269,25 @@ margin: 0 auto;
 }
 .from-left {
   grid-column: 2 / 3;
+  transform: translateX(-50%);
 }
 
 .from-right {
   grid-column: 3 / 4;
+  transform: translateX(50%);
 }
+
+.from-left , .from-right{
+  transition: opacity 255ms ease-in,
+  transform 400ms ease-in;
+  opacity: 0;
+}
+
+.from-left.appear , .from-right.appear{
+  transform: translateX(0);
+  opacity: 1;
+}
+
 
 .article-container{
   margin: 0 auto;

@@ -107,6 +107,15 @@ header {
   width: 80%;
 }
 
+.fade-in {
+  opacity: 0;
+  transition: opacity 250ms ease-in;
+}
+
+.fade-in.appear {
+  opacity: 1;
+}
+
 .books-title {
   text-align: center;
 }
@@ -125,13 +134,16 @@ header {
 }
 
 .Books-Section .Books .books-title {
-  margin-top: 8rem;
-  padding-top: -4rem;
+  margin-top: 6rem;
+  padding-top: -6rem;
 }
 
 .Books-Section .Books img {
   width: 60%;
   margin: 0 auto;
+  min-width: 50px;
+  min-height: 50px;
+  border: 1px solid red;
 }
 
 .Books-Section .Books p {
@@ -155,6 +167,9 @@ header {
   order: 8;
 }
 
+/*
+
+*/
 .article-section {
   display: block;
   height: max-content;
@@ -239,9 +254,19 @@ header {
   }
   .from-left {
     grid-column: 2 / 3;
+    transform: translateX(-50%);
   }
   .from-right {
     grid-column: 3 / 4;
+    transform: translateX(50%);
+  }
+  .from-left, .from-right {
+    transition: opacity 255ms ease-in, transform 400ms ease-in;
+    opacity: 0;
+  }
+  .from-left.appear, .from-right.appear {
+    transform: translateX(0);
+    opacity: 1;
   }
   .article-container {
     margin: 0 auto;
