@@ -26,7 +26,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2em 3em;
+  padding: 2em 2em;
   transition: background 450ms ease-in;
   background: var(--background);
   color: var(--text);
@@ -80,8 +80,8 @@ header {
 .home-intro {
   
   
-  height: 50vw;
-  width: 60%;
+  height: 70vw;
+  width: 90%;
   margin: 0 auto;
   background: rgb(134, 124, 76) url(/img/Bostrom.jpg);
   background-size:100%;
@@ -136,27 +136,22 @@ header {
 
 .Books-Section{
   background: rgb(236, 235, 227);
+  position: relative;
   
-  
-  
+  padding-top: 3rem;
 
 .Books {
      display:grid;
      grid-gap: 5em;
-     justify-content:space-around;
-     padding: 8em 0;
-    margin-top: 8rem;
-    padding-top: -5rem;
+     justify-content:space-evenly;
+     
+   
+    
 
-    .books-title{
-      margin-top: 6rem;
-      padding-top: -6rem;
-    }
+    
    img{width:60%; 
-     margin:0 auto;
-     min-width: 50px;
-     min-height: 50px;
-     border: 1px solid red;
+     margin:3rem auto;
+     
 }
     p{
       width: 80%;
@@ -217,7 +212,9 @@ text-align: center;
 .footer{
 margin: 0 auto;
   padding-right: 80px;
-  .footer-text{display: none;}
+  .footer-text{
+    display: none;
+  }
     
   ul{
     
@@ -226,10 +223,10 @@ margin: 0 auto;
     text-align: center;
     border-radius: 15px;
     width: 100%;
-    justify-content: center;
+    
     background-color:var(--bg-ternary) ;
     display: flex;
-    
+    justify-content: center;
   list-style:none;
 }
   svg{
@@ -240,6 +237,17 @@ margin: 0 auto;
 }
 
 @media screen and (min-width:1024px){
+
+  .home-intro {
+  
+  
+    height: 40vw;
+    width: 60%;
+  }
+
+
+
+
 
   .Books-Section{ 
     

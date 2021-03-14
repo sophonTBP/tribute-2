@@ -24,7 +24,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2em 3em;
+  padding: 2em 2em;
   transition: background 450ms ease-in;
   background: var(--background);
   color: var(--text);
@@ -72,8 +72,8 @@ header {
 }
 
 .home-intro {
-  height: 50vw;
-  width: 60%;
+  height: 70vw;
+  width: 90%;
   margin: 0 auto;
   background: #867c4c url(/img/Bostrom.jpg);
   background-size: 100%;
@@ -122,28 +122,19 @@ header {
 
 .Books-Section {
   background: #ecebe3;
+  position: relative;
+  padding-top: 3rem;
 }
 
 .Books-Section .Books {
   display: grid;
   grid-gap: 5em;
-  justify-content: space-around;
-  padding: 8em 0;
-  margin-top: 8rem;
-  padding-top: -5rem;
-}
-
-.Books-Section .Books .books-title {
-  margin-top: 6rem;
-  padding-top: -6rem;
+  justify-content: space-evenly;
 }
 
 .Books-Section .Books img {
   width: 60%;
-  margin: 0 auto;
-  min-width: 50px;
-  min-height: 50px;
-  border: 1px solid red;
+  margin: 3rem auto;
 }
 
 .Books-Section .Books p {
@@ -219,9 +210,9 @@ header {
   text-align: center;
   border-radius: 15px;
   width: 100%;
-  justify-content: center;
   background-color: var(--bg-ternary);
   display: flex;
+  justify-content: center;
   list-style: none;
 }
 
@@ -232,6 +223,10 @@ header {
 }
 
 @media screen and (min-width: 1024px) {
+  .home-intro {
+    height: 40vw;
+    width: 60%;
+  }
   .Books-Section .Books {
     align-items: center;
     grid-template-columns: minmax(1em, 1fr) repeat(2, minmax(200px, 600px)) minmax(1em, 1fr);
