@@ -4,15 +4,65 @@ body {
   --text: #f4f4f4;
   --text-inverse: #333;
   --background: rgb(173, 167, 134);
-  --spacing: 1em;
+  --spacing: 0.5em;
   word-spacing: 0.2em;
 }
 
 .site-logo {
+  padding-top: 0.3rem;
   font-weight: 900;
-  font-size: 0.8rem;
+  font-size: clamp(0.5rem, 1.6vw, 1.3rem);
   color: var(--text);
   text-decoration: none;
+}
+
+.site-logo svg {
+  margin-top: 3px;
+  width: 10%;
+  min-width: 10px;
+  transform: rotate(-90deg);
+}
+
+@media only screen and (max-width: 600px) {
+  .site-logo .logo-text {
+    padding-top: 0.3rem;
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .site-logo svg {
+    display: none;
+  }
+}
+
+.tooltip {
+  display: inline-block;
+  position: relative;
+  text-align: left;
+}
+
+.tooltip .right {
+  min-width: 200px;
+  top: 180%;
+  left: 10%;
+  margin-left: 20px;
+  transform: translate(0, -50%);
+  padding: 10px 20px;
+  color: #444444;
+  background-color: #EEEEEE;
+  font-weight: normal;
+  font-size: 13px;
+  border-radius: 8px;
+  position: absolute;
+  z-index: 99999999;
+  box-sizing: border-box;
+  box-shadow: 0 1px 8px #756a35;
+  display: none;
+}
+
+.tooltip:hover .right {
+  display: block;
 }
 
 header {
@@ -24,10 +74,11 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2em 2em;
+  padding: 2em 1em;
   transition: background 450ms ease-in;
   background: var(--background);
   color: var(--text);
+  box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
 }
 
 .nav__list {
@@ -44,8 +95,8 @@ header {
   padding: calc(var(--spacing) / 2) var(--spacing);
   position: relative;
   text-transform: uppercase;
-  letter-spacing: 2px;
-  font-size: 0.9rem;
+  letter-spacing: 1px;
+  font-size: clamp(0.6rem, 1.6vw, 2rem);
 }
 
 .nav__link:after {
@@ -75,7 +126,7 @@ header {
   height: 70vw;
   width: 90%;
   margin: 0 auto;
-  background: #867c4c url(/img/Bostrom.jpg);
+  background: #867c4c url(/tribute/img/Bostrom.jpg);
   background-size: 100%;
   background-blend-mode: multiply;
   display: flex;
@@ -104,6 +155,8 @@ header {
   text-align: center;
   max-width: 900px;
   margin: 0 auto;
+  margin-bottom: 5rem;
+  padding-bottom: 8rem;
   width: 80%;
 }
 
@@ -123,7 +176,8 @@ header {
 .Books-Section {
   background: #ecebe3;
   position: relative;
-  padding-top: 3rem;
+  margin-top: 6rem;
+  padding-top: 8rem;
 }
 
 .Books-Section .Books {
@@ -139,7 +193,7 @@ header {
 
 .Books-Section .Books p {
   width: 80%;
-  margin: 0 auto;
+  margin: 2rem auto;
 }
 
 .Books-Section .Books #gsr-img {
@@ -161,16 +215,35 @@ header {
 /*
 
 */
+#img-caption {
+  text-align: center;
+}
+
+#img-div {
+  display: grid;
+}
+
+#image {
+  position: relative;
+  margin: 0 auto;
+  max-width: 90%;
+  height: auto;
+}
+
 .article-section {
   display: block;
   height: max-content;
-  width: 80%;
   margin: 0 auto;
 }
 
+.article-container {
+  margin: 1rem auto;
+  width: 80%;
+}
+
 .media {
-  width: 60%;
-  margin: 8rem auto;
+  width: 100%;
+  margin: 3rem auto;
   text-align: center;
 }
 
@@ -180,19 +253,8 @@ header {
 
 .media .media-container .video-container {
   position: relative;
-  padding-bottom: 56.25%;
-  /* 16:9 */
-  padding-top: 25px;
-  height: 0;
-  margin-bottom: 8rem;
-}
-
-.media .video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  aspect-ratio: 16/9;
 }
 
 .footer {
@@ -222,10 +284,14 @@ header {
   height: 2rem;
 }
 
+/*--------------------------------large screen ---------------------------------------*/
 @media screen and (min-width: 1024px) {
   .home-intro {
     height: 40vw;
     width: 60%;
+  }
+  .site-logo {
+    padding-top: 0;
   }
   .Books-Section .Books {
     align-items: center;

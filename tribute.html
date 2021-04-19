@@ -13,7 +13,28 @@
 <body>
   <main id="main">
     <header>
-      <a href="#" class="site-logo" aria-label="homepage">Back to portfolio</a>
+      <a href="../index.html" class="site-logo" aria-label="homepage">
+        <span class="logo-text">Portfolio</span>
+        <div class="btn btn-primary tooltip">
+          <svg aria-hidden="true" focusable="false" data-prefix="fad" data-icon="angle-double-right" role="img"
+            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"
+            class="svg-inline--fa fa-angle-double-right fa-w-14 fa-5x">
+            <g class="fa-group">
+              <path fill="currentColor"
+                d="M224 273L88.37 409a23.78 23.78 0 0 1-33.8 0L32 386.36a23.94 23.94 0 0 1 0-33.89l96.13-96.37L32 159.73a23.94 23.94 0 0 1 0-33.89l22.44-22.79a23.78 23.78 0 0 1 33.8 0L223.88 239a23.94 23.94 0 0 1 .1 34z"
+                class="fa-secondary"></path>
+              <path fill="currentColor"
+                d="M415.89 273L280.34 409a23.77 23.77 0 0 1-33.79 0L224 386.26a23.94 23.94 0 0 1 0-33.89L320.11 256l-96-96.47a23.94 23.94 0 0 1 0-33.89l22.52-22.59a23.77 23.77 0 0 1 33.79 0L416 239a24 24 0 0 1-.11 34z"
+                class="fa-primary"></path>
+            </g>
+
+          </svg>
+          <div class="right">
+
+            <p>go back to Portfolio</p>
+          </div>
+        </div>
+      </a>
       <nav class="main-nav">
         <ul class="nav__list">
           <li class="nav__list-item"><a href="#tribute-info" class="nav__link">Biography</a></li>
@@ -21,12 +42,12 @@
             <a href="#Books" class="nav__link">Books</a>
           </li>
           <li class="nav__list-item">
-            <a href="#" class="nav__link">Article</a>
+            <a href="#image" class="nav__link">Article</a>
           </li>
           <li class="nav__list-item">
-            <a href="#" class="nav__link">Media</a>
+            <a href="#video" class="nav__link">Media</a>
           </li>
-          <li class="nav__list-item"><a href="#" class="nav__link">Official Website</a></li>
+          <li class="nav__list-item"><a href="https://www.nickbostrom.com/" class="nav__link"  id="tribute-link" target="_blank">Website</a></li>
         </ul>
       </nav>
 
@@ -58,10 +79,11 @@
 
     </article>
 
-    <section  class="Books-Section">
-      <h2 id="Books" class="books-title">Books</h2>
+    <section id="Books" class="Books-Section">
+      <h2 class="books-title">Books</h2>
       <div class="Books">
-        <img src="/img/SuperIntelligence.jpg" alt=" Super Intelligence book cover" class="slide-in from-left" id="" />
+        <img src="/tribute/img/SuperIntelligence.jpg" alt=" Super Intelligence book cover" class="slide-in from-left"
+          id="" />
         <p class="slide-in from-right">
 
           The human brain has some capabilities that the brains of other animals lack. It is to these distinctive
@@ -106,11 +128,11 @@
           science, society, technology, and public policy; and for academics, policy-makers, and professionals working
           in these acutely important fields.
         </p>
-        <img id="gsr-img" src="/img/GlobalCatastrophicRisk.jpg" alt="Global Catastrophic Risk book cover"
+        <img id="gsr-img" src="/tribute/img/GlobalCatastrophicRisk.jpg" alt="Global Catastrophic Risk book cover"
           class="slide-in from-right" />
       </div>
       <div class="Books">
-        <img src="/img/Anthropic Bias.jpg" alt="Anthropic Bias book cover" class="slide-in from-left" />
+        <img src="/tribute/img/Anthropic Bias.jpg" alt="Anthropic Bias book cover" class="slide-in from-left" />
         <p class="slide-in from-right">
           Anthropic Bias explores how to reason when you suspect that your evidence is biased by "observation selection
           effects"--that is, evidence that has been filtered by the precondition that there be some suitably positioned
@@ -157,7 +179,7 @@
           sceptics, enthusiasts and moderates. These are the arguments that will determine how humanity develops in the
           near future.
         </p>
-        <img id="hs-img" src="/img/HumanEnhancement.jpg" alt="Human Enhancement book cover"
+        <img id="hs-img" src="/tribute/img/HumanEnhancement.jpg" alt="Human Enhancement book cover"
           class="slide-in from-right" />
       </div>
     </section>
@@ -167,8 +189,10 @@
 
     <section class="article-section">
 
-      <img id="img-div">
-      <img id="image" src="/img/thanh-nguyenSETIsmall.jpg" width="100%" height="100%" alt=""> </img>
+      <div id="img-div">
+        <img id="image" src="/tribute/img/thanh-nguyenSETIsmall.jpg" width="100%" height="100%" alt="">
+      
+      <div id="img-caption">SETI : search for extraterrestrial intelligence.</div>
       </div>
 
       <article class="article-container">
@@ -534,7 +558,7 @@
 
 
 
-    <section class="media">
+    <section id="video" class="media">
 
       <div class="media-container">
 
@@ -542,16 +566,14 @@
         <div class="video-container">
 
           <iframe width="560" height="349" class="video" src="https://www.youtube.com/embed/cZYNADOHhVY" frameborder="0"
-          srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/cZYNADOHhVY?autoplay=1><img src=https://img.youtube.com/vi/cZYNADOHhVY/hqdefault.jpg alt='The Fable of the Dragon-Tyrant'><span>▶</span></a>"
-            allow="accelerometer; autoplay; encrypted-media; gyroscope;" 
-            loading="lazy" allowfullscreen></iframe>
+            srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/cZYNADOHhVY?autoplay=1><img src=https://img.youtube.com/vi/cZYNADOHhVY/hqdefault.jpg alt='The Fable of the Dragon-Tyrant'><span>▶</span></a>"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope;" loading="lazy" allowfullscreen></iframe>
         </div>
         <h4 class="video-title">A podcast with him and Lex Fridman</h4>
         <div class="video-container">
 
           <iframe width="560" height="349" class="video" src="https://www.youtube.com/embed/rfKiTGj-zeQ" frameborder="0"
-            
-            allow="accelerometer; autoplay; encrypted-media; gyroscope;"  allowfullscreen></iframe>
+            allow="accelerometer; autoplay; encrypted-media; gyroscope;" allowfullscreen></iframe>
         </div>
       </div>
     </section>
@@ -613,6 +635,7 @@
     </section>
   </main>
   <script src="observers.js"></script>
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </body>
 
 </html>

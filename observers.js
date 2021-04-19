@@ -4,7 +4,8 @@ const sectionOne = document.querySelector(".home-intro");
 const faders = document.querySelectorAll('.fade-in');
 const sliders =document.querySelectorAll('.slide-in')
 const sectionOneOptions = {
-  rootMargin: "-200px 0px 0px 0px"
+  threshold: 0,
+  rootMargin: "-150px 0px 0px 0px"
 };
 
 const sectionOneObserver = new IntersectionObserver(function(
