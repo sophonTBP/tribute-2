@@ -29,6 +29,10 @@ body {
     display: none;}
 }
 @media only screen and (min-width: 600px) {
+  #img-div{
+    display: grid;
+    place-items: center;
+    margin: 0 auto;}
   .site-logo svg{display: none;}
 }
 .tooltip {
@@ -134,7 +138,7 @@ header {
   height: 70vw;
   width: 90%;
   margin: 0 auto;
-  background: rgb(134, 124, 76) url(/tribute/img/Bostrom.jpg);
+  background: rgb(134, 124, 76) url(/img/Bostrom.jpg);
   background-size:100%;
   background-blend-mode: multiply;
   display: flex;
@@ -235,15 +239,22 @@ header {
 
 #img-div{
   display: grid;
+  place-items: center;
+  
+ 
+  
+
 }
 #image{
-  position: relative;
-  margin: 0 auto;
-  max-width: 90%;
+  
+  max-width: 80%;
+ 
+  
+  
   height: auto;
 }
    .article-section{
-     display: block;
+     display: grid;
      height:max-content;
     
      margin: 0 auto; }
@@ -276,7 +287,7 @@ header {
     width: 100vw;
     aspect-ratio: 16/9;
 	
-    
+    height:50%
   
     
 } }}
@@ -388,6 +399,26 @@ header {
   width: 60%;
 
 }
+
+
+#img-div{
+  display: grid;
+  place-items: center;
+  margin: 0 auto;
+  max-width: 80%;
+  
+
+}
+#image{
+  
+  
+ 
+  
+  
+  height: auto;
+}
+
+
 .footer{
  
 .footer-text{ 

@@ -29,13 +29,17 @@ body {
     display: none;
   }
 }
-
 @media only screen and (min-width: 600px) {
+  #img-div {
+    display: grid;
+    place-items: center;
+    margin: 0 auto;
+  }
+
   .site-logo svg {
     display: none;
   }
 }
-
 .tooltip {
   display: inline-block;
   position: relative;
@@ -98,7 +102,6 @@ header {
   letter-spacing: 1px;
   font-size: clamp(0.6rem, 1.6vw, 2rem);
 }
-
 .nav__link:after {
   content: "";
   position: absolute;
@@ -110,7 +113,6 @@ header {
   transform: scaleX(0);
   transition: transform 150ms ease-in-out;
 }
-
 .nav__link:hover::after {
   transform: scaleX(1);
 }
@@ -126,7 +128,7 @@ header {
   height: 70vw;
   width: 90%;
   margin: 0 auto;
-  background: #867c4c url(/tribute/img/Bostrom.jpg);
+  background: #867c4c url(/img/Bostrom.jpg);
   background-size: 100%;
   background-blend-mode: multiply;
   display: flex;
@@ -179,35 +181,28 @@ header {
   margin-top: 6rem;
   padding-top: 8rem;
 }
-
 .Books-Section .Books {
   display: grid;
   grid-gap: 5em;
   justify-content: space-evenly;
 }
-
 .Books-Section .Books img {
   width: 60%;
   margin: 3rem auto;
 }
-
 .Books-Section .Books p {
   width: 80%;
   margin: 2rem auto;
 }
-
 .Books-Section .Books #gsr-img {
   order: 3;
 }
-
 .Books-Section .Books #gsr-text {
   order: 4;
 }
-
 .Books-Section .Books #hs-img {
   order: 7;
 }
-
 .Books-Section .Books #hs-text {
   order: 8;
 }
@@ -221,17 +216,18 @@ header {
 
 #img-div {
   display: grid;
+  place-items: center;
 }
 
 #image {
-  position: relative;
-  margin: 0 auto;
-  max-width: 90%;
+  max-width: 80%;
   height: auto;
 }
 
 .article-section {
-  display: block;
+  display: grid;
+  height: -webkit-max-content;
+  height: -moz-max-content;
   height: max-content;
   margin: 0 auto;
 }
@@ -246,26 +242,23 @@ header {
   margin: 3rem auto;
   text-align: center;
 }
-
 .media .media-container {
   display: block;
 }
-
 .media .media-container .video-container {
   position: relative;
   width: 100vw;
   aspect-ratio: 16/9;
+  height: 50%;
 }
 
 .footer {
   margin: 0 auto;
   padding-right: 80px;
 }
-
 .footer .footer-text {
   display: none;
 }
-
 .footer ul {
   height: 3rem;
   line-height: 2.5rem;
@@ -277,7 +270,6 @@ header {
   justify-content: center;
   list-style: none;
 }
-
 .footer svg {
   padding-top: 1rem;
   margin: 0.2rem 0.5rem;
@@ -290,9 +282,11 @@ header {
     height: 40vw;
     width: 60%;
   }
+
   .site-logo {
     padding-top: 0;
   }
+
   .Books-Section .Books {
     align-items: center;
     grid-template-columns: minmax(1em, 1fr) repeat(2, minmax(200px, 600px)) minmax(1em, 1fr);
@@ -313,28 +307,44 @@ header {
   .Books-Section .Books #hs-text {
     order: initial;
   }
+
   .from-left {
-    grid-column: 2 / 3;
+    grid-column: 2/3;
     transform: translateX(-50%);
   }
+
   .from-right {
-    grid-column: 3 / 4;
+    grid-column: 3/4;
     transform: translateX(50%);
   }
+
   .from-left, .from-right {
-    transition: opacity 255ms ease-in, transform 400ms ease-in;
+    transition: opacity 255ms ease-in, transform 400ms ease-in;
     opacity: 0;
   }
+
   .from-left.appear, .from-right.appear {
     transform: translateX(0);
     opacity: 1;
   }
+
   .article-container {
     margin: 0 auto;
     width: 60%;
   }
+
+  #img-div {
+    display: grid;
+    place-items: center;
+    margin: 0 auto;
+    max-width: 80%;
+  }
+
+  #image {
+    height: auto;
+  }
+
   .footer .footer-text {
     display: block;
   }
-}
-/*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=main.css.map */
